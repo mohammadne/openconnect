@@ -3,4 +3,16 @@
 
   tasks:
   - import_tasks: tasks/install_docker.yml
+    tags: [ install ]
+
   - import_tasks: tasks/setup_openconnect.yml
+    tags: [ setup ]
+  
+  - import_tasks: tasks/add_user.yml
+    tags: [ add_user ]
+
+  - import_tasks: tasks/add_user.yml
+    tags: [ delete_user ]
+
+  - import_tasks: tasks/add_user.yml
+    tags: [ delete ]
