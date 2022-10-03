@@ -1,6 +1,8 @@
 # openconnect
 
 > connect to openconnect as easy as possible
+>
+> this installaion requires an ubuntu server but other distributions will be supported as soon as possible.
 
 ## run
 
