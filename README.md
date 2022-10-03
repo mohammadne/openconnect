@@ -6,15 +6,24 @@
 
 ## run
 
+
 ### linux
 
-``` bash
-# install ansible
-sudo apt-get install ansible
+1. install ansible
 
-# clone the repository
-git clone https://github.com/mohammadne/openconnect
+    ``` bash
+    # install ansible on Debian-based distros
+    sudo apt-get install ansible
+    ```
 
-# run the playbook
-ansible-playbook -i hosts -u slave -K playbook.yml
-```
+2. clone the repository
+
+    ``` bash
+    git clone https://github.com/mohammadne/openconnect
+    ```
+
+3. run the playbook
+
+    ``` bash
+    ansible-playbook -i hosts -u ubuntu -K playbook.yml
+    ```
