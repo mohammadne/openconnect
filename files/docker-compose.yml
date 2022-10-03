@@ -6,13 +6,13 @@ services:
     restart: always
     privileged: true
     ports:
-      - ${PORT}:443
-      - ${PORT}:443/udp
+      - 4443:443
+      - 4443:443/udp
     environment:
-      - CA_CN=${CA_CN}
-      - CA_ORG=${CA_ORG}
-      - CA_DAYS=${CA_DAYS}
-      - SRV_CN=${SRV_CN}
-      - SRV_ORG=${SRV_ORG}
-      - SRV_DAYS=${SRV_DAYS}
-      - NO_TEST_USER=${NO_TEST_USER}
+      - CA_CN=example.com
+      - CA_ORG=example.com
+      - CA_DAYS=365
+      - SRV_CN=example.com
+      - SRV_ORG=example
+      - SRV_DAYS=365
+      - NO_TEST_USER=1

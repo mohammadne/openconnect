@@ -3,3 +3,4 @@
 
   tasks:
   - import_tasks: tasks/install_docker.yml
+  - import_tasks: tasks/setup_openconnect.yml
