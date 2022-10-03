@@ -1,0 +1,19 @@
+- name: creates directory for holding manifests
+  file:
+    path: ~/openconnect
+    state: directory
+
+- name: copy required files
+  copy:
+    src: files/{{ item }}
+    dest: ~/openconnect/{{ item }}
+  loop:
+  - docker-compose.yml
+  - .env
+
+# use files parameter to use multiple docker-compose.yml files
+- name: deploy Docker Compose stack
+  community.docker.docker_compose:
+    project_src: ~/openconnect
+    files:
+    - docker-compose.yml

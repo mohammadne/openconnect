@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  openconnect:
+    image: quay.io/aminvakil/ocserv:latest
+    container_name: openconnect
+    restart: always
+    privileged: true
+    ports:
+      - ${PORT}:443
+      - ${PORT}:443/udp
+    environment:
+      - CA_CN=${CA_CN}
+      - CA_ORG=${CA_ORG}
+      - CA_DAYS=${CA_DAYS}
+      - SRV_CN=${SRV_CN}
+      - SRV_ORG=${SRV_ORG}
+      - SRV_DAYS=${SRV_DAYS}
+      - NO_TEST_USER=${NO_TEST_USER}
